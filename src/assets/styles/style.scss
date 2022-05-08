@@ -14,41 +14,39 @@ $keyHeight: $keyWidth;
     outline-offset: 0;
 }
 
-.title {
-	margin: 5px;
+.wrapper {
+	margin: 5px auto;
 	width: $area;
-	font-size: 34px;
-	font-weight: bold;
-	text-align: center;
-}
-
-p {
-	margin: 5px;
-}
-
-textarea {
-	margin: 5px;
-	padding: 3px;
-	width: $area;
-	height: $height;
-	box-sizing: border-box;
-	resize: none;
-}
-
-.keyboard {
-	margin: 5px;
-	padding: 5px 0;
-	width: $area;
-	height: $height;
-	background: rgb(139, 202, 228);
-	border-radius: 7px;
-}
-
-.row {
-	display: flex;
-	justify-content: center;
-	margin: 3px 5px;
-	width: $area - 10px;
+	.title {
+		margin: 5px auto;
+		font-size: 34px;
+		font-weight: bold;
+		text-align: center;
+	}
+	p {
+		margin: 5px auto;
+	}
+	textarea {
+		margin: 5px auto;
+		padding: 3px;
+		width: $area;
+		height: $height;
+		box-sizing: border-box;
+		resize: none;
+	}
+	.keyboard {
+		margin: 5px auto;
+		padding: 5px 0;
+		height: $height;
+		background: rgb(139, 202, 228);
+		border-radius: 7px;
+		.row {
+			display: flex;
+			justify-content: center;
+			margin: 3px 5px;
+			width: $area - 10px;
+		}
+	}
 }
 
 .key {
@@ -71,7 +69,7 @@ textarea {
 
 .active, .shift_active, .caps_active{
 	background: $color_active;
-	transition: .1s;
+	transition: .3s;
 }
 
 div#ShiftLeft, div#CapsLock, div#Backspace {

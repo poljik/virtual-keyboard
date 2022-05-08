@@ -99,12 +99,12 @@ class Keyboard {
         this.EN = true;
       }
     }
+    this.bodyWrapper = createElem("div", "wrapper", "wrapper");
+    createChildElem(this.bodyWrapper, "div", "tittle", "title").textContent = "Virtual keyboard";
+    createChildElem(this.bodyWrapper, "p").textContent = "Language switch: AltLeft + ShiftLeft";
 
-    createElem("div", "tittle", "title").textContent = "Virtual keyboard";
-    createElem("p").textContent = "Language switch: AltLeft + ShiftLeft";
-
-    this.bodyTextArea = createElem("textarea", "textarea", "textarea");
-    this.bodyKb = createElem("div", "keyboard", "keyboard");
+    this.bodyTextArea = createChildElem(this.bodyWrapper, "textarea", "textarea", "textarea");
+    this.bodyKb = createChildElem(this.bodyWrapper, "div", "keyboard", "keyboard");
     
     for (let indexRow = 0; indexRow < 5; indexRow++) {
       const rootRow = createChildElem(this.bodyKb ,"div", "row", "row");

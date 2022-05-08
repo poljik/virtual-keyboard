@@ -8,20 +8,24 @@
   outline-offset: 0;
 }
 
-.title {
-  margin: 5px;
+.wrapper {
+  margin: 5px auto;
   width: 700px;
+}
+
+.wrapper .title {
+  margin: 5px auto;
   font-size: 34px;
   font-weight: bold;
   text-align: center;
 }
 
-p {
-  margin: 5px;
+.wrapper p {
+  margin: 5px auto;
 }
 
-textarea {
-  margin: 5px;
+.wrapper textarea {
+  margin: 5px auto;
   padding: 3px;
   width: 700px;
   height: 250px;
@@ -30,16 +34,15 @@ textarea {
   resize: none;
 }
 
-.keyboard {
-  margin: 5px;
+.wrapper .keyboard {
+  margin: 5px auto;
   padding: 5px 0;
-  width: 700px;
   height: 250px;
   background: #8bcae4;
   border-radius: 7px;
 }
 
-.row {
+.wrapper .keyboard .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,8 +82,8 @@ textarea {
 
 .active, .shift_active, .caps_active {
   background: #cc7171;
-  -webkit-transition: .1s;
-  transition: .1s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 div#ShiftLeft, div#CapsLock, div#Backspace {
