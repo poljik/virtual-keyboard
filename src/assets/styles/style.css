@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.title {
+  margin: 5px;
+  width: 700px;
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  margin: 5px;
+}
+
+textarea {
+  margin: 5px;
+  padding: 3px;
+  width: 700px;
+  height: 250px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: none;
+}
+
+.keyboard {
+  margin: 5px;
+  padding: 5px 0;
+  width: 700px;
+  height: 250px;
+  background: #8bcae4;
+  border-radius: 7px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3px 5px;
+  width: 690px;
+}
+
+.key {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(315deg, #bec2ce 10%, #646969);
+  border-radius: 5px;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(23, 45, 86, 0.41);
+          box-shadow: 4px 4px 8px 0px rgba(23, 45, 86, 0.41);
+}
+
+.key:hover {
+  background: #aace89;
+}
+
+.key:active {
+  background: #cc7171;
+}
+
+.active, .shift_active, .caps_active {
+  background: #cc7171;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+div#ShiftLeft, div#CapsLock, div#Backspace {
+  width: 93.2px;
+}
+
+div#Enter {
+  width: 82.8px;
+}
+
+div#Tab {
+  width: 46px;
+}
+
+div#ControlLeft, div#ControlRight {
+  width: 72px;
+}
+
+div#Space {
+  width: 249.6px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,95 @@
+$color_active: rgb(204, 113, 113);
+$area: 700px;
+$height: 250px;
+$keyWidth: 40px;
+$keyHeight: $keyWidth;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.title {
+	margin: 5px;
+	width: $area;
+	font-size: 34px;
+	font-weight: bold;
+	text-align: center;
+}
+
+p {
+	margin: 5px;
+}
+
+textarea {
+	margin: 5px;
+	padding: 3px;
+	width: $area;
+	height: $height;
+	box-sizing: border-box;
+	resize: none;
+}
+
+.keyboard {
+	margin: 5px;
+	padding: 5px 0;
+	width: $area;
+	height: $height;
+	background: rgb(139, 202, 228);
+	border-radius: 7px;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+	margin: 3px 5px;
+	width: $area - 10px;
+}
+
+.key {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin: 3px;
+	width: $keyWidth;
+	height: $keyHeight;
+	background: linear-gradient(315deg, rgb(190, 194, 206) 10%, rgb(100, 105, 105));
+	border-radius: 5px;
+	box-shadow: 4px 4px 8px 0px rgba(23, 45, 86, 0.41);
+	&:hover {
+		background: rgb(170, 206, 137);
+	}
+	&:active {
+		background: $color_active;
+	}
+}
+
+.active, .shift_active, .caps_active{
+	background: $color_active;
+	transition: .1s;
+}
+
+div#ShiftLeft, div#CapsLock, div#Backspace {
+	width: 2.33*$keyWidth;
+}
+
+div#Enter {
+	width: 2.07*$keyWidth;
+}
+
+div#Tab {
+	width: 1.15*$keyWidth;
+}
+
+div#ControlLeft, div#ControlRight {
+	width: 1.8*$keyWidth;
+}
+
+div#Space {
+	width: 6.24*$keyWidth;
+}
