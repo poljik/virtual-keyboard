@@ -73,14 +73,11 @@
 }
 
 .key:hover {
-  background: #aace89;
-}
-
-.key:active {
   background: #cc7171;
 }
 
 .active, .shift_active, .caps_active {
+  border-radius: 15px;
   background: #cc7171;
   -webkit-transition: .3s;
   transition: .3s;

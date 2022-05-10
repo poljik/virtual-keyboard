@@ -60,14 +60,12 @@ $keyHeight: $keyWidth;
 	border-radius: 5px;
 	box-shadow: 4px 4px 8px 0px rgba(23, 45, 86, 0.41);
 	&:hover {
-		background: rgb(170, 206, 137);
-	}
-	&:active {
 		background: $color_active;
 	}
 }
 
 .active, .shift_active, .caps_active{
+	border-radius: 15px;
 	background: $color_active;
 	transition: .3s;
 }

@@ -174,7 +174,7 @@ class Keyboard {
         }
 
         if (code === "Tab") {
-          this.bodyTextArea.textContent += "    ";
+          this.bodyTextArea.textContent += "\t";
         }
         
         if (code === "AltLeft") {
