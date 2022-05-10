@@ -150,44 +150,26 @@ class Keyboard {
 
         if (code === "ShiftLeft" || code === "ShiftRight") {
           this.Shift = true;
-          el.classList.add("shift_active");
-          if (this.Alt) {
-            this.changeLang();
-          } else this.shiftPress();
+          if (this.Alt) this.changeLang();
+          else this.shiftPress();
         }
 
         if (code === "CapsLock") {
-          if (this.Caps) {
-            this.Caps = false;
-            el.classList.remove("caps_active");
-          } else {
-            this.Caps = true;
-            el.classList.add("caps_active");
-          }
+          el.classList.toggle("caps_active");
+          if (this.Caps) this.Caps = false;
+          else this.Caps = true;
           this.capsPress();
         }
 
-        if (code === "Space") {
-          this.bodyTextArea.textContent += " ";
-        }
+        if (code === "Enter") char = "\n";
 
-        if (code === "Tab") {
-          this.bodyTextArea.textContent += "\t";
-        }
+        if (code === "Space") this.bodyTextArea.textContent += " ";
+
+        if (code === "Tab") this.bodyTextArea.textContent += "\t";
 
         if (code === "AltLeft") {
-          if (this.Alt) {
-            this.Alt = false;
-          } else {
-            this.Alt = true;
-          }
-          if (this.Shift) {
-            this.changeLang();
-          }
-        }
-
-        if (code === "Enter") {
-          char = "\n";
+          this.Alt = true;
+          if (this.Shift) this.changeLang();
         }
 
         if (code === "Backspace" || code === "Delete") {
@@ -196,9 +178,7 @@ class Keyboard {
           char = "";
         }
 
-        if (char.length === 1) {
-          this.bodyTextArea.textContent += char;
-        }
+        if (char.length === 1) this.bodyTextArea.textContent += char;
 
         this.bodyTextArea.selectionStart = this.bodyTextArea.textContent.length;
         this.bodyTextArea.selectionEnd = this.bodyTextArea.selectionStart;
@@ -249,8 +229,14 @@ class Keyboard {
       if (!this.Shift && this.EN) {
         array[index].textContent = (key.flat())[index];
       }
+      if (!this.Shift && this.EN && this.Caps) {
+        array[index].textContent = (keyCaps.flat())[index];
+      }
       if (!this.Shift && !this.EN) {
         array[index].textContent = (keyRu.flat())[index];
+      }
+      if (!this.Shift && !this.EN && this.Caps) {
+        array[index].textContent = (keyRuCaps.flat())[index];
       }
     }
   }
@@ -281,7 +267,6 @@ class Keyboard {
       this.EN = true;
       localStorage.setItem("vrKbEN", "true");
     }
-    this.capsPress();
   }
 }
 

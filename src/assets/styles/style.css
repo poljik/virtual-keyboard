@@ -76,7 +76,7 @@
   background: #cc7171;
 }
 
-.active, .shift_active, .caps_active {
+.active, .caps_active {
   border-radius: 15px;
   background: #cc7171;
   -webkit-transition: .3s;
