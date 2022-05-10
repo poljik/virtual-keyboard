@@ -13,9 +13,9 @@ module.exports = {
   mode: "development",
   plugins: [
     new HtmlWebpackPlugin({
-      title:"Virtual keyboard",
-      filename:"index.html",
-      template:"src/index.html",
+      title: "Virtual keyboard",
+      filename: "index.html",
+      template: "src/index.html",
     }),
   ],
   module: {
